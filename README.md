@@ -52,6 +52,8 @@ pio run -t upload
 pio device monitor
 ```
 
+PlatformIO auto-detects the serial port (Linux/macOS `/dev/...`, Windows `COMx`). Override with `upload_port` / `monitor_port` in `board/platformio.ini` if needed.
+
 Source is `board/src/main.cpp`. Do not flash a lone application `.bin` to offset `0x0` — that overwrites the bootloader.
 
 ## Hardware
