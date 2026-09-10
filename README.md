@@ -44,7 +44,7 @@ Installed events:
 
 ## Firmware
 
-Flash firmware via PlatformIO:
+Build and flash from the PlatformIO project in `board/` (bootloader, partition table, and app):
 
 ```bash
 cd board
@@ -52,7 +52,7 @@ pio run -t upload
 pio device monitor
 ```
 
-A prebuilt binary is available at `board/firmware.bin`.
+Source is `board/src/main.cpp`. Do not flash a lone application `.bin` to offset `0x0` — that overwrites the bootloader.
 
 ## Hardware
 
